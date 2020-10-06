@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Arreglo aleatorio</title>
+    <script>
+       var array = []; //variable arreglo aleatorio.
+       var sumatotal = 0; //variable suma total 
+       var multiplicarpares = 1;//variable  para la multiplicacion de pares del array
+       var sumarimpares = 0;// variable para la suma de impares del array aleatorio
+       var primo = 0; //variables primo
+       var listaprimos = ' '; //variable lista primos
+       var listanoprimos = ' '; //variable lista no primos
+
+        //array aleatorio 
+       for(var i = 0; i < 19; i++){
+            array [i] = Math.round(Math.random() * 100);
+       }
+       // suma total de los numeros del array
+       for( var i = 0; i < 5; i++){
+            sumatotal += array[i];
+       }
+      //suma y multiplicacion de pares e impares 
+       for(var i = 0; i < 5; i++){
+           if(array[i] % 2 == 0){
+               multiplicarpares = multiplicarpares * array[i];
+           }
+           else{
+               sumarimpares += array[i];
+           }
+       }     
+       //lista primos y no primos
+       for(var c = 1; c < array[i]; c++){
+           if(array[i] % c == 0){
+               primo += 1;
+           }
+       }
+        if(primo > 2){
+            listanoprimos += '-' + array[i];
+        }
+        else{
+            listaprimos += '-' + array[i];
+           }
+       
+        
+       alert('Números aleatorios: ' + array);
+       alert("La suma total  de todos los numeros es: " + sumatotal);
+       alert("La multiplicación de los numeros pares es: "+ multiplicarpares);
+       alert("La suma de los numeros impares es: " + sumarimpares);
+       alert("Lista de los numeros que no son primos: " + listaprimos );
+       alert("Lista de los numeros que son primos: " +listanoprimos);
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
